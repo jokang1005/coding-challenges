@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HeaderComponent } from './shared';
+import { ReactiveFormsModule } from '@angular/forms'
 import { ContactModule } from './contact/contact.module';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ContactModule } from './contact/contact.module';
     HttpClientModule,
     HttpModule,
     NgbModule.forRoot(),
+    ReactiveFormsModule,
     ContactModule,
   ],
   bootstrap: [AppComponent]

@@ -1,3 +1,18 @@
-<p>
-  contact works!
-</p>
+<div class="container">
+  <form [formGroup]="contactForm">
+    <label for="name">Name
+      <input type="string" formControlName="name">
+    </label>
+    <label for="email">Email
+      <input type="string" formControlName="email">
+    </label>
+    <label for="message">Message
+      <input type="string" formControlName="message">
+    </label>
+    <label for="shouldAddToNewsletter">Should Add To Newsletter
+      <input type="checkbox" formControlName="shouldAddToNewsletter">
+    </label>
+  </form>
+</div>
+
+{{contactForm.value | json}}
