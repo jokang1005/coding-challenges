@@ -20,4 +20,10 @@ export class ContactComponent implements OnInit {
 
   }
 
+  get name() {return this.contactForm.get('name')}
+  get email() {return this.contactForm.get('email')}
+  get message() {return this.contactForm.get('message')}
+  onSubmit () {
+    console.log(this.contactForm.value)
+  }
 }

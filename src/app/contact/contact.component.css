@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 450px;
+    border:  5px solid black;
+    padding: 10px;
+
+}
+
+.contact-label {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.contact-input {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}

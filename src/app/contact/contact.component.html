@@ -1,18 +1,36 @@
+{{contactForm.value | json}}
+
 <div class="container">
-  <form [formGroup]="contactForm">
-    <label for="name">Name
-      <input type="string" formControlName="name">
-    </label>
-    <label for="email">Email
-      <input type="string" formControlName="email">
-    </label>
-    <label for="message">Message
-      <input type="string" formControlName="message">
-    </label>
-    <label for="shouldAddToNewsletter">Should Add To Newsletter
-      <input type="checkbox" formControlName="shouldAddToNewsletter">
-    </label>
+  <form [formGroup]="contactForm" class='contact-form'>
+    <label for="name" class="contact-label">Name</label>   
+      <input type="string" class="contact-input" formControlName="name" required>
+      
+      <label for="email" class="contact-label">Email</label>   
+      <input type="string" class="contact-input" formControlName="email" required>
+      
+      <label for="message" class="contact-label">Message</label>
+      <input type="string" class="contact-input" formControlName="message">
+      
+      <label for="shouldAddToNewsletter" class="contact-label">Should Add To Newsletter</label>
+      <input type="checkbox" class="contact-input" formControlName="shouldAddToNewsletter">
+      
+      
+      <div class="error" *ngIf='name.invalid && (name.dirty || name.touched)'>
+        <div *ngIf="name.errors?.required">
+          <p>Name is required.</p>
+        </div>
+      </div>      
+      <div class="error" *ngIf='email.invalid && (email.dirty || email.touched)'>
+        <div *ngIf="email.errors?.required">
+          <p>Email is required.</p>
+        </div>
+      </div>
+      <div class="error" *ngIf='message.invalid && (message.dirty || message.touched)'>
+        <div *ngIf="message.errors?.required">
+          <p>Message is required.</p>
+        </div>
+      </div>
+  <button class="submit" (click)="onSubmit()">SUBMIT</button>
   </form>
 </div>
 
-{{contactForm.value | json}}
