@@ -11,13 +11,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HeaderComponent } from './shared';
-import { ContactComponent } from './contact/contact.component';
+import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +25,8 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     HttpClientModule,
     HttpModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    ContactModule,
   ],
   bootstrap: [AppComponent]
 })

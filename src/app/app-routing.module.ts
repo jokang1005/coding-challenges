@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { ContactComponent } from './contact/contact.component'
 
 const routes: Routes = [
   {
@@ -12,12 +11,12 @@ const routes: Routes = [
     loadChildren: './not-found/not-found.module#NotFoundModule'
   },
   {
-    path: '**',
-    redirectTo: 'not-found'
+    path: 'contact',
+    loadChildren: './contact/contact.module#ContactModule'
   },
   {
-    path: 'contact',
-    loadChildren: './contact/contact.'
+    path: '**',
+    redirectTo: 'not-found'
   }
 ];
 
