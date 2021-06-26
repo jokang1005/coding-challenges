@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { ContactComponent } from './contact/contact.component'
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     useHash: true,
     preloadingStrategy: PreloadAllModules,
-    onSameUrlNavigation: 'reload'
+    onSameUrlNavigation: 'reload',
+    {path: '/contact', component: ContactComponent}
 })],
   exports: [RouterModule]
 })
