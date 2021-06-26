@@ -14,15 +14,20 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: 'not-found'
+  },
+  {
+    path: 'contact',
+    loadChildren: './contact/contact.'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
+  imports: [
+    RouterModule.forRoot(routes, {
     useHash: true,
     preloadingStrategy: PreloadAllModules,
     onSameUrlNavigation: 'reload',
-    {path: '/contact', component: ContactComponent}
+    
 })],
   exports: [RouterModule]
 })
