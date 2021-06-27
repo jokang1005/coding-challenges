@@ -25,5 +25,7 @@ export class ContactComponent implements OnInit {
   get message() {return this.contactForm.get('message')}
   onSubmit () {
     console.log(this.contactForm.value)
+    console.log("")
+
   }
 }
