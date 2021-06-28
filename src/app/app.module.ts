@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './shared';
 import { ReactiveFormsModule } from '@angular/forms'
 import { ContactModule } from './contact/contact.module';
+import { ApicallService } from './apicall.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ContactModule } from './contact/contact.module';
     ReactiveFormsModule,
     ContactModule,
   ],
+  providers: [ApicallService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

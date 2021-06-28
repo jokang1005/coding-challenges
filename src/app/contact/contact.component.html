@@ -30,7 +30,7 @@
           <p>Message is required.</p>
         </div>
       </div>
-  <button [ngClass]="'submit'" (click)="onSubmit()">SUBMIT</button>
+  <button [ngClass]="'submit'" [disabled]="name.invalid || email.invalid || message.invalid" (click)="onSubmit()">SUBMIT</button>
   </form>
 </div>
 
