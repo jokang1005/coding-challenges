@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 import { ApicallService } from '../apicall.service'
@@ -10,6 +11,8 @@ import { ApicallService } from '../apicall.service'
 export class ContactComponent implements OnInit {
   constructor(private fb: FormBuilder, private api:ApicallService) { }
   
+  http$ = this.api
+
   contactForm = this.fb.group({
     name: ["", Validators.required],
     email: ["", Validators.required],
@@ -17,10 +20,18 @@ export class ContactComponent implements OnInit {
     shouldAddToNewsletter: false
   })
   ngOnInit() {
+    this.api.getHandling().subscribe(
+      res => console.log('HTTP response', res),
+      err => console.log('HTTP Error', err),
+      () => console.log('HTTP request completed')
+    )
+
+    
     this.api.getHandling().subscribe((data: any) => {
       console.log(data)
 
     })
+
   }
 
   get name() {return this.contactForm.get('name')}
@@ -35,3 +46,4 @@ export class ContactComponent implements OnInit {
     alert("contact successfully submitted")
   }
 }
+

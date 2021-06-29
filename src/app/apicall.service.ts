@@ -17,4 +17,8 @@ export class ApicallService {
     })
   }
 
+  errorHandling() {
+    console.log(this.httpClient)
+    return this.httpClient
+  }
 }
