@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.oreo {
+    position: absolute;
+    width: 54em;
+    top: 20px;
+    left: -11em;
+    z-index: -1;
+}
+
+.oreo2 {
+    position: absolute;
+    width: 54em;
+    top: 270px;
+    right: -11em;
+    z-index: -1;
+    transform: scale(-1, -1)
+}
+
+.block {
+    display: block;
+}
+
+.fourofour-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+
+
+}
+
+.fourofour {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 4.5em;
+    padding-bottom: 10px;
+    
+}
+
+.page-not-found {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+.frustrated-img {
+    margin-top: 40px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.poss-routes-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.these-pages {
+    padding: 10px;
+}
+
+.pages-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    width: 20em;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    text-align: center;
+    font-size: 24px;
+}
+

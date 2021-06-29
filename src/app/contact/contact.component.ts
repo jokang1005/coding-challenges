@@ -26,6 +26,7 @@ export class ContactComponent implements OnInit {
   get name() {return this.contactForm.get('name')}
   get email() {return this.contactForm.get('email')}
   get message() {return this.contactForm.get('message')}
+  
   onSubmit () {
     this.api.postHandling(this.contactForm.getRawValue()).subscribe((info: any) => {
       console.log(info)

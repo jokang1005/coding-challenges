@@ -1,4 +1,35 @@
-<div>
-  <h1>Not Found</h1>
-  <p>This page is not found.</p>
+<div [ngClass]="'container'">
+  <div class='stop-img'>
+    <!-- <img src="https://previews.123rf.com/images/robindrewit/robindrewit1812/robindrewit181200002/120131169-cartoon-illustration-of-a-construction-worker-holding-a-stop-sign-and-pointing-.jpg" alt="construction-worker"> -->
+    <img [ngClass]="'oreo'" src="https://images.unsplash.com/photo-1531257243018-c547a2e35767?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=964&q=80" alt="broken-oreo">
+  </div>
+  <div [ngClass]="'block'">
+    <div [ngClass]="'fourofour-container'">
+      <h1 [ngClass]="'fourofour'">404</h1>
+      <!-- <h2 [ngClass]="'page-not-found'">page not found</h2> -->
+    </div>
+    <div [ngClass]="'sorry-container'">
+    </div>
+    <div [ngClass]="'img-container'">
+      <!-- <img [ngClass]="'frustrated-img'"src="https://debate.protocommunications.com/wp-content/uploads/2018/03/frustrated-meme-300x173.png" alt="frustrated-meme"> -->
+      <img src="https://i.pinimg.com/originals/53/4c/80/534c80c05632e904beddc124bba0d3e6.jpg" alt="cookie-crumble">
+    </div>
+    <div [ngClass]="'poss-routes-container'">
+      <h2 [ngClass]="'these-pages'">Could you have meant these pages?</h2>
+      <div [ngClass]="'pages-container'">
+        <div>
+          <p>home</p>
+          <a [routerLink]="['/']"><img [ngClass]="'link'"src="/assets/home.png" alt="home"></a>
+        </div>
+        <div>
+          <p>contact</p>
+          <a [routerLink]="['/contact']"><img [ngClass]="'link'" src="/assets/contact.png" alt="contact"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='stop-img'>
+    <!-- <img src="https://previews.123rf.com/images/robindrewit/robindrewit1812/robindrewit181200002/120131169-cartoon-illustration-of-a-construction-worker-holding-a-stop-sign-and-pointing-.jpg" alt="construction-worker"> -->
+    <img class='oreo2' src="https://images.unsplash.com/photo-1531257243018-c547a2e35767?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=964&q=80" alt="broken-oreo">
+  </div>
 </div>
